@@ -9,7 +9,7 @@
 #include <stdbool.h>
 
 // File name used for saving records
-#define myFile "test_1.txt"
+#define MY_FILE "test_1.txt"
 
 // Structure of date
 struct date
@@ -289,7 +289,7 @@ void reverseList (Student **pHead)
 int saveToFile(Student *head)
 {
     // Open file stream, discard previous content
-    FILE *pFile = fopen(myFile, "w");
+    FILE *pFile = fopen(MY_FILE, "w");
     
     // If fopen failed, return 1
     if (pFile == NULL)
@@ -334,7 +334,7 @@ int retrieveFromFile(Student **pHead)
     Student *currentNode = NULL;
     
     // Open file stream for read only
-    FILE *pFile = fopen(myFile, "r");
+    FILE *pFile = fopen(MY_FILE, "r");
     
     // If fopen failed, return 1
     if (pFile == NULL)
